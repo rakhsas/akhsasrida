@@ -8,12 +8,8 @@ import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 // import Contact from "./components/contact/contact";
 import { Analytics } from "@vercel/analytics/react"
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -44,6 +40,7 @@ function App() {
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Analytics />
+        <SpeedInsights />
         <Footer />
       </div>
     </Router>
